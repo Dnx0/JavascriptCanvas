@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas</title>
+</head>
+
+<body>
+  <canvas width="800" height="800"></canvas>
+  <script>
+    let canvas = document.querySelector("canvas");
+    let context = canvas.getContext("2d");
+    //definindo a cor do quadrado
+    context.fillStyle = 'blue';
+  //o primeiro valor é sobre o eixo X, o segundo valor sobre o eixo y, depois a alura e largura
+    // context.fillRect(100,100,400,400);
+
+   
+  // Criando uma nova forma
+    context.beginPath();
+  //o primeiro valor é sobre o eixo X, o segundo valor sobre o eixo y, depois a alura e largura
+    context.rect(100,100,400,400);
+  // Muda o tamanho do contorno
+    context.lineWidth = 4;
+  //Cria um contoro para o retangulo 
+    context.stroke();
+  // Ref: https://www.w3schools.com/html/html5_canvas.asp
+
+
+// CRIANDO UM CIRCULO
+  context.beginPath();
+//o primeiro valor é sobre o eixo X, o segundo valor sobre o eixo y, depois o Radios e depois a dimensão de 0 a 360, sendo represenado por PI*2
+  context.arc(95, 50, 40, 0, 2*Math.PI);
+  context.fillStyle = 'red';
+  // Ref: https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_canvas_tut_path2
+
+  
+
+  </script>
+</body>
+
+</html>
